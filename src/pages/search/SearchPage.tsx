@@ -34,7 +34,6 @@ const SearchPage = ({}: SearchPageProps) => {
 
   const teams = filterTeams(data || []);
   const celebrities = filterCelebrities(data || []);
-  const systems = filterSystems(data || []);
 
   return (
     <Area>
