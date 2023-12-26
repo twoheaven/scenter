@@ -51,14 +51,14 @@ const FieldCard = ({ field }: FieldCardProps) => {
         <Flex justifyContent="flex-start">
           <Wrapper>
             <Spacer height={"5px"} />
-            <Text size="20px">
+            <Text size="20px" style={{ textAlign: "left" }}>
               {title}dddddddddddddddddddd
               <Distance />
               <Distance />
             </Text>
             <Spacer height={"5px"} />
 
-            <Text>
+            <Text style={{ textAlign: "left" }}>
               {date}d
               <Distance />
               <Distance />
@@ -66,7 +66,7 @@ const FieldCard = ({ field }: FieldCardProps) => {
 
             <Spacer height={"2px"} />
 
-            <Text>
+            <Text style={{ textAlign: "left" }}>
               출연진 : {location}
               <Distance />
               <Distance />
@@ -74,7 +74,7 @@ const FieldCard = ({ field }: FieldCardProps) => {
 
             <Spacer height={"2px"} />
 
-            <Text>
+            <Text style={{ textAlign: "left" }}>
               {casting}d
               <Distance />
               <Distance />
