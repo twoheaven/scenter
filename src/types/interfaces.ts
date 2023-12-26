@@ -6,6 +6,13 @@ export interface Tab {
   division?: Division; // 이 탭과 관련된 부문 (선택 사항)
 }
 
+export interface Image {
+  id: number;
+  originalFileName: string;
+  storedFilePath: string;
+  fileSize: number;
+}
+
 // 이미지에 대한 추가 정보를 포함하는 인터페이스입니다.
 export interface Picture extends Image {
   boardIdx: number; // 이미지와 연관된 게시판의 식별자
