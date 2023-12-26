@@ -19,10 +19,7 @@ const SystemPage = ({}: SystemPageProps) => {
 
       <Content>
         <Flex justifyContent="center">
-          <Intro.StudyIntro1 />
-        </Flex>
-        <Flex justifyContent="center">
-          <Intro.StudyIntro2 />
+          <Intro.SystemIntro1 />
         </Flex>
       </Content>
 

@@ -21,9 +21,6 @@ const PartyPage = ({}: PartyPageProps) => {
         <Flex justifyContent="center">
           <Intro.PartyIntro1 />
         </Flex>
-        <Flex justifyContent="center">
-          <Intro.PartyIntro2 />
-        </Flex>
       </Content>
 
       <Spacer height={"100px"} />

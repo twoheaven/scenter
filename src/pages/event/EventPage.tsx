@@ -22,9 +22,6 @@ const EventPage = ({}: EventPageProps) => {
         <Flex justifyContent="center">
           <Intro.EventIntro1 />
         </Flex>
-        <Flex justifyContent="center">
-          <Intro.EventIntro2 />
-        </Flex>
       </Content>
 
       <Spacer height={"100px"} />

@@ -21,9 +21,6 @@ const StudyPage = ({}: StudyPageProps) => {
         <Flex justifyContent="center">
           <Intro.StudyIntro1 />
         </Flex>
-        <Flex justifyContent="center">
-          <Intro.StudyIntro2 />
-        </Flex>
       </Content>
 
       <Spacer height={"100px"} />
