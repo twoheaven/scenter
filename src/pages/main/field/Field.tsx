@@ -4,19 +4,19 @@ import {
   Flex,
   Grid,
   Highlight,
+  Spacer,
   Text,
 } from "@dohyun-ko/react-atoms";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { toast } from "react-toastify";
 
-import { deleteField, getField, getFields, postField } from "@/apis/field-api";
+import { deleteField, getFields, postField } from "@/apis/field-api";
 import useIsMobile from "@/hooks/useIsMobile";
 import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
-import Paths from "@/types/paths";
 import QueryKeys from "@/types/queryKeys";
-import { isLoggedIn } from "@/utils/utils";
+
+import FieldCard from "./FieldCard";
 
 // Field 컴포넌트의 프로퍼티 정의
 interface FieldProps {}
@@ -47,7 +47,6 @@ const Field = ({}: FieldProps) => {
   // 배너 생성 및 삭제에 사용되는 React Query Mutation 훅들 생성
   const createField = useMutation(postField);
   const deleteFieldMutation = useMutation(deleteField);
-
   // JSX 반환
   return (
     <Area>
@@ -70,15 +69,18 @@ const Field = ({}: FieldProps) => {
             </Highlight>
           </Text>
         </Flex>
-        <Flex gap={"10px"}></Flex>
-        <Grid
-          // 그리드의 열을 4개로 구성합니다.
-          gridTemplateColumns={"1fr 1fr 1fr 1fr"}
-          // 모바일 환경과 일반 환경에 따라 그리드 아이템 사이의 간격을 동적으로 조절합니다.
-          gap={isMobile ? "10px" : "20px"}
-        >
-          {/* 각 추천 공연팀에 대한 정보가 있을 경우에만 해당 공연팀을 렌더링합니다. */}
-        </Grid>
+        <Flex justifyContent="center" width={"100%"}>
+          <Grid // 그리드의 열을 3개로 구성합니다.
+            gridTemplateColumns={isMobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr"}
+            gap={isMobile ? "3px" : "3px"}
+          >
+            <FieldCard />
+            <FieldCard />
+            <FieldCard />
+            <FieldCard />
+          </Grid>
+          <Spacer height={"10px"} />
+        </Flex>
       </Content>
     </Area>
   );

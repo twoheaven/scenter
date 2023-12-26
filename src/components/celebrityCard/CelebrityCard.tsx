@@ -14,21 +14,27 @@ import { Team } from "@/types/interfaces";
 import Paths from "@/types/paths";
 import { divisionToKorean } from "@/utils/utils";
 
+// CelebrityCard 컴포넌트의 Props를 정의합니다.
 interface CelebrityCardProps {
-  team: Team;
+  team: Team; // 연예인 정보를 담은 객체
 }
 
+// CelebrityCard 컴포넌트를 정의합니다.
 const CelebrityCard = ({ team }: CelebrityCardProps) => {
+  // 연예인 정보를 비구조화 할당합니다.
   const { teamName, mainPicture, shortIntro, teamMany, division } = team;
 
+  // react-router의 useNavigate 훅을 사용하여 페이지 이동 함수를 가져옵니다.
   const navigate = useNavigate();
 
   return (
+    // 클릭 가능한 Button 컴포넌트로 감싼 연예인 카드입니다.
     <Button
       onClick={() => {
-        navigate(Paths.TeamDetail + team.id);
+        navigate(Paths.TeamDetail + team.id); // 연예인 상세페이지로 이동합니다.
       }}
     >
+      {/* Flex 컴포넌트를 사용하여 유연한 레이아웃을 구성합니다. */}
       <Flex
         gap={"20px"}
         style={{
@@ -36,6 +42,7 @@ const CelebrityCard = ({ team }: CelebrityCardProps) => {
           padding: "20px",
         }}
       >
+        {/* 연예인 이미지를 보여주는 부분 */}
         <Flex flexDirection={"column"} width={"30%"} justifyContent={"center"}>
           <img
             src={mainPicture?.storedFilePath || defaultImage}
@@ -49,7 +56,9 @@ const CelebrityCard = ({ team }: CelebrityCardProps) => {
           />
         </Flex>
 
+        {/* 연예인 정보를 나타내는 부분 */}
         <Flex flexDirection={"column"} flex={"1"} gap={"10px"}>
+          {/* 연예인 이름 및 간단 소개 */}
           <Flex flexDirection={"column"}>
             <Text size={"18px"} textAlign={"start"}>
               {teamName}
@@ -68,17 +77,20 @@ const CelebrityCard = ({ team }: CelebrityCardProps) => {
             </Grid>
           </Flex>
 
+          {/* 간격 조절을 위한 Spacer 컴포넌트 */}
           <Spacer height={"1px"} />
 
+          {/* Divider 컴포넌트를 사용하여 구분선을 추가합니다. */}
           <Divider />
 
+          {/* 연예인 부문 및 인원 정보 */}
           <Flex gap={"10px"}>
             <Text size={"12px"} color={colorSet.textLight}>
-              {divisionToKorean(division)}
+              {divisionToKorean(division)} {/* 연예인 부문 */}
             </Text>
             <Divider vertical={true} />
             <Text size={"12px"} color={colorSet.textLight}>
-              {teamMany}명
+              {teamMany}명 {/* 연예인 인원 수 */}
             </Text>
           </Flex>
         </Flex>
