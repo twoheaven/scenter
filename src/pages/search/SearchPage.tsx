@@ -116,39 +116,6 @@ const SearchPage = ({}: SearchPageProps) => {
             </Text>
           )}
         </Flex>
-        <Spacer height={"100px"} />
-
-        <Flex justifyContent={"center"}>
-          <Text font={Fonts.Medium} size={isMobile ? "20px" : "28px"}>
-            시스템 지원
-          </Text>
-
-          <Spacer height={"30px"} />
-
-          <Divider
-            style={{
-              height: "2px",
-            }}
-          />
-
-          <Spacer height={"30px"} />
-
-          {systems.length ? (
-            <Grid
-              gridTemplateColumns={isMobile ? "1fr" : "1fr 1fr"}
-              gap={"20px"}
-            >
-              {systems.map((team) => (
-                <TeamCard key={team.id} team={team} />
-              ))}
-            </Grid>
-          ) : (
-            <Text size={isMobile ? "16px" : "20px"} color={colorSet.textGray}>
-              검색 결과가 없습니다
-            </Text>
-          )}
-        </Flex>
-        <Spacer height={"100px"} />
       </Content>
 
       <Spacer height={"100px"} />

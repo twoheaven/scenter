@@ -20,10 +20,10 @@ import {
   CelebrityTabs,
   DanceTabs,
   MCTabs,
+  PartyTabs,
   PerformanceTabs,
   PlayTabs,
   SingTabs,
-  PartyTabs,
 } from "@/store";
 import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
