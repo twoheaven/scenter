@@ -35,13 +35,11 @@ const Footer = ({}: FooterProps) => {
               color: colorSet.textGray,
             }}
           >
-            <Text size={"14px"}>상호명 : 버스킹월드</Text>
-            <Text size={"14px"}>사업자등록번호 : 108-15-79542</Text>
-            <Text size={"14px"}>
-              서울특별시 강남구 개포로110길 50 , 107-1801
-            </Text>
-            <Text size={"14px"}>전화번호 : 02-401-0113</Text>
-            <Text size={"14px"}>이메일 : buskingworld@naver.com</Text>
+            <Text size={"14px"}>상호명 : 제이에이치원엔터테인먼트</Text>
+            <Text size={"14px"}>사업자등록번호 : 215-87-82736</Text>
+            <Text size={"14px"}>서울특별시 송파구 송이로 20길 4-11</Text>
+            <Text size={"14px"}>Tel : 0505-510-0202</Text>
+            <Text size={"14px"}>이메일 : scdata@naver.com</Text>
           </Flex>
         </Flex>
       </Content>
