@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import defaultImage from "@/assets/default-image.svg";
 import colorSet from "@/styles/color-set";
 import { Team } from "@/types/interfaces";
+import Paths from "@/types/paths";
 import { divisionToKorean } from "@/utils/utils";
 
 // TeamCard 컴포넌트의 Props를 정의합니다.
@@ -28,7 +29,11 @@ const TeamCard = ({ team }: TeamCardProps) => {
 
   return (
     // 클릭 가능한 Button 컴포넌트로 감싼 공연팀 카드입니다.
-    <Button>
+    <Button
+      onClick={() => {
+        navigate(Paths.TeamDetail + team.id); // 공연팀 상세페이지로 이동합니다.
+      }}
+    >
       {/* Flex 컴포넌트를 사용하여 유연한 레이아웃을 구성합니다. */}
       <Flex
         gap={"20px"}

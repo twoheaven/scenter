@@ -20,7 +20,7 @@ const MainPage = ({}: MainPageProps) => {
         }}
       />
 
-      <Spacer height={"32px"} />
+      <Spacer height={"10px"} />
 
       <Category />
 

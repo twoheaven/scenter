@@ -69,31 +69,6 @@ const Header = ({}: HeaderProps) => {
             <WrapperLink to={Paths.Main}>
               <img src={Logo} alt={"logo"} width={"70px"} />
             </WrapperLink>
-            {/* 각종 메뉴에 대한 링크 */}
-            <WrapperLink to={Paths.Teams}>
-              <Text>공연팀</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Celebrities}>
-              <Text>연예인</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Event}>
-              <Text>행사</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Party}>
-              <Text>파티</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Study}>
-              <Text>교육</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Systems}>
-              <Text>시스템</Text>
-            </WrapperLink>
-
             {/* 로그인 상태에 따라 콘텐츠 생성 버튼 표시 */}
             {isLoggedIn() && (
               <WrapperLink to={Paths.ContentCreate}>
@@ -113,6 +88,13 @@ const Header = ({}: HeaderProps) => {
           </Flex>
           <Flex gap={"30px"}>
             <Text></Text>
+            <Text>　</Text>
+            <Text>　</Text>
+            <Text>　</Text>
+            <Text>　</Text>
+            <Text>　</Text>
+            <Text>　</Text>
+            <Text>　</Text>
             <Text>　</Text>
             <Text>　</Text>
           </Flex>
@@ -189,6 +171,36 @@ const Header = ({}: HeaderProps) => {
               />
             </WrapperLink>
           </Flex>
+          <Spacer height={"5px"} />
+          <Divider />
+          <Spacer height={"10px"} />
+          {/* 각종 메뉴에 대한 링크 */}
+          <Flex gap={"15px"} alignItems="center">
+            <WrapperLink to={Paths.Teams}>
+              <Text>공연팀</Text>
+            </WrapperLink>
+            <Text style={{ color: "#999999" }}>|</Text>
+            <WrapperLink to={Paths.Celebrities}>
+              <Text>연예인</Text>
+            </WrapperLink>
+            <Text style={{ color: "#999999" }}>|</Text>
+            <WrapperLink to={Paths.Event}>
+              <Text>행사</Text>
+            </WrapperLink>
+            <Text style={{ color: "#999999" }}>|</Text>
+            <WrapperLink to={Paths.Party}>
+              <Text>파티</Text>
+            </WrapperLink>
+            <Text style={{ color: "#999999" }}>|</Text>
+            <WrapperLink to={Paths.Study}>
+              <Text>교육</Text>
+            </WrapperLink>
+            <Text style={{ color: "#999999" }}>|</Text>
+            <WrapperLink to={Paths.Systems}>
+              <Text>시스템</Text>
+            </WrapperLink>
+          </Flex>
+          <Spacer height={"10px"} />
         </Flex>
       </Content>
 

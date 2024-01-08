@@ -7,10 +7,12 @@ import styled, { CSSProperties } from "styled-components";
 import useIsMobile from "@/hooks/useIsMobile";
 import { Tab } from "@/types/interfaces";
 
+// 페이지 헤더 컴포넌트의 프로퍼티 정의
 interface PageHeaderProps {
   children: React.ReactNode;
 }
 
+// 페이지 헤더 컴포넌트 정의
 const PageHeader = ({ children }: PageHeaderProps) => {
   return (
     <Content>
@@ -21,10 +23,12 @@ const PageHeader = ({ children }: PageHeaderProps) => {
   );
 };
 
+// 페이지 헤더 타이틀 컴포넌트의 프로퍼티 정의
 interface TitleProps {
   text: string;
 }
 
+// 페이지 헤더 타이틀 컴포넌트 정의
 const Title = ({ text }: TitleProps) => {
   const isMobile = useIsMobile();
 
@@ -39,24 +43,23 @@ const Title = ({ text }: TitleProps) => {
   );
 };
 
+// 수직 선 컴포넌트 정의
 const VerticalLine = styled.div`
   width: 1px;
   height: 12px;
   background-color: ${colorSet.textLight};
 `;
 
+// 페이지 헤더 탭 컴포넌트의 프로퍼티 정의
 interface TabProps {
   tabs: Tab[];
-
   activeTab: Tab;
-
   onClickTab: (name: Tab) => void;
-
   gap?: CSSProperties["gap"];
-
   disabled?: boolean;
 }
 
+// 페이지 헤더 탭 컴포넌트 정의
 const Tabs = ({
   tabs,
   activeTab,
@@ -98,6 +101,7 @@ const Tabs = ({
   );
 };
 
+// 페이지 헤더 서브 탭 컴포넌트 정의
 const SubTabs = ({ tabs, activeTab, onClickTab }: TabProps) => {
   const isMobile = useIsMobile();
 
@@ -133,12 +137,14 @@ const SubTabs = ({ tabs, activeTab, onClickTab }: TabProps) => {
   );
 };
 
+// 페이지 헤더 필터 컴포넌트의 프로퍼티 정의
 interface FilterProps {
   filters: string[];
   selectedFilter: string;
   onClickFilter: (filter: string) => void;
 }
 
+// 페이지 헤더 필터 컴포넌트 정의
 const Filter = ({ filters, selectedFilter, onClickFilter }: FilterProps) => {
   return (
     <Flex
@@ -164,6 +170,7 @@ const Filter = ({ filters, selectedFilter, onClickFilter }: FilterProps) => {
   );
 };
 
+// 컴포넌트 간 편한 재사용을 위해 모듈로 내보냄
 PageHeader.Title = Title;
 PageHeader.Tabs = Tabs;
 PageHeader.SubTabs = SubTabs;
