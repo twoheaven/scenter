@@ -127,7 +127,7 @@ const Header = ({}: HeaderProps) => {
             </form>
 
             {/* 문의 전화번호 */}
-            <Text color={colorSet.textGray}>문의 : 02-401-0113</Text>
+            <Text color={colorSet.textGray}>문의 : 0505-510-0202</Text>
           </Flex>
           {/* 소셜 링크 모음 */}
           <Flex gap={"10px"} alignItems={"center"}>
