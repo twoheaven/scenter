@@ -394,7 +394,7 @@ const TeamInfoCard = () => {
         </Text>
 
         <Text font={Fonts.Bold} color={colorSet.primary} size={"24px"}>
-          버스킹 월드 연결
+          SC Ent 연결
         </Text>
 
         <Spacer height={"5px"} />
@@ -406,7 +406,7 @@ const TeamInfoCard = () => {
           height={"30px"}
           onClick={() => navigate(Paths.Contact)}
         >
-          <Text size={"12px"}>문의하기</Text>
+          <Text size={"12px"} color={"white"}>문의하기</Text>
         </Button>
       </Flex>
 
