@@ -51,7 +51,7 @@ const Category = ({}: CategoryProps) => {
               >
                 <Text
                   size={isMobile ? "0.75rem" : "1.5rem"}
-                  color={activeIndex === index ? "white" : colorSet.textLight}
+                  color={activeIndex === index ? "white" : "black"}
                 >
                   {category}
                 </Text>

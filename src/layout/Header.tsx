@@ -22,14 +22,19 @@ import instagramLogo from "@/assets/instagram-logo.svg";
 import Logo from "@/assets/logo.png";
 import naverBlogLogo from "@/assets/naver-blog-logo.png";
 import youtubeLogo from "@/assets/youtube-logo.svg";
+import useIsMobile from "@/hooks/useIsMobile";
 import Fonts from "@/styles/fonts";
 import { isLoggedIn } from "@/utils/utils";
+
+import kakaoLogo from "../assets/kakao-logo.svg";
 
 // Header 컴포넌트의 프로퍼티를 정의하는 인터페이스
 interface HeaderProps {}
 
 // Header를 나타내는 함수형 컴포넌트
 const Header = ({}: HeaderProps) => {
+  // 모바일 환경 여부를 확인하는 커스텀 훅 사용
+  const isMobile = useIsMobile();
   // React Router의 navigate 훅 사용
   const navigate = useNavigate();
 
@@ -99,7 +104,11 @@ const Header = ({}: HeaderProps) => {
             <Text>　</Text>
           </Flex>
           {/* 오른쪽 섹션 - 검색 폼 및 문의 전화번호 */}
-          <Flex alignItems={"center"} justifyContent={""} gap={"10px"}>
+          <Flex
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            gap={"10px"}
+          >
             {/* 검색 폼 */}
             <form onSubmit={handleFormSubmit}>
               <Flex alignItems={"center"}>
@@ -120,6 +129,7 @@ const Header = ({}: HeaderProps) => {
             {/* 문의 전화번호 */}
             <Text color={colorSet.textGray}>문의 : 02-401-0113</Text>
           </Flex>
+          {/* 소셜 링크 모음 */}
           <Flex gap={"10px"} alignItems={"center"}>
             {/* YouTube 링크를 위한 WrapperLink */}
             <WrapperLink to={"https://www.youtube.com/@buskingworld"}>
@@ -171,36 +181,6 @@ const Header = ({}: HeaderProps) => {
               />
             </WrapperLink>
           </Flex>
-          <Spacer height={"5px"} />
-          <Divider />
-          <Spacer height={"10px"} />
-          {/* 각종 메뉴에 대한 링크 */}
-          <Flex gap={"15px"} alignItems="center">
-            <WrapperLink to={Paths.Teams}>
-              <Text>공연팀</Text>
-            </WrapperLink>
-            <Text style={{ color: "#999999" }}>|</Text>
-            <WrapperLink to={Paths.Celebrities}>
-              <Text>연예인</Text>
-            </WrapperLink>
-            <Text style={{ color: "#999999" }}>|</Text>
-            <WrapperLink to={Paths.Event}>
-              <Text>행사</Text>
-            </WrapperLink>
-            <Text style={{ color: "#999999" }}>|</Text>
-            <WrapperLink to={Paths.Party}>
-              <Text>파티</Text>
-            </WrapperLink>
-            <Text style={{ color: "#999999" }}>|</Text>
-            <WrapperLink to={Paths.Study}>
-              <Text>교육</Text>
-            </WrapperLink>
-            <Text style={{ color: "#999999" }}>|</Text>
-            <WrapperLink to={Paths.Systems}>
-              <Text>시스템</Text>
-            </WrapperLink>
-          </Flex>
-          <Spacer height={"10px"} />
         </Flex>
       </Content>
 

@@ -1,4 +1,4 @@
-import { Spacer } from "@dohyun-ko/react-atoms";
+import { Divider, Spacer } from "@dohyun-ko/react-atoms";
 
 import BannerSection from "./banner/BannerSection";
 import Category from "./category/Category";
@@ -14,15 +14,17 @@ const MainPage = ({}: MainPageProps) => {
       <BannerSection />
 
       <Spacer
-        height={"30px"}
+        height={"20px"}
         style={{
           flexGrow: 0,
         }}
       />
 
-      <Spacer height={"10px"} />
-
       <Category />
+
+      <Spacer height={"20px"} />
+
+      <Divider />
 
       <Spacer height={"80px"} />
 

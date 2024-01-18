@@ -235,7 +235,7 @@ const BannerSection = ({}: BannerSectionProps) => {
                         >{`공연문의하기 >`}</Text>
                       </Button>
 
-                      {/* 카카오톡 채팅 링크 버튼 */}
+                      {/* 카카오톡 채팅 링크 버튼
                       <WrapperLink to={"https://pf.kakao.com/_cVkMG/chat"}>
                         <Flex
                           gap={"5px"}
@@ -260,7 +260,7 @@ const BannerSection = ({}: BannerSectionProps) => {
                             상담톡 바로가기
                           </Text>
                         </Flex>
-                      </WrapperLink>
+                      </WrapperLink> */}
                     </Flex>
                   </Flex>
                 ))}
