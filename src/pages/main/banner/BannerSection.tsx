@@ -221,7 +221,7 @@ const BannerSection = ({}: BannerSectionProps) => {
                         backgroundColor={"white"}
                         borderRadius={"4px"}
                         style={{
-                          padding: isMobile ? "8px 8px" : "15px 2%",
+                          padding: isMobile ? "8px 8px" : "15px 3.8%",
                           display: "flex",
                           alignItems: "center",
                         }}
@@ -232,6 +232,7 @@ const BannerSection = ({}: BannerSectionProps) => {
                         <Text
                           font={Fonts.Bold}
                           size={isMobile ? "10px" : "20px"}
+                          color="#00A0E9"
                         >{`공연문의하기 >`}</Text>
                       </Button>
 

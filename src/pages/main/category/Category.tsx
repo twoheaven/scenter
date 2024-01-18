@@ -32,7 +32,7 @@ const Category = ({}: CategoryProps) => {
     <Area>
       <Content>
         {/* 카테고리 버튼들을 포함한 Flex 컴포넌트 */}
-        <Flex gap={isMobile ? "38px" : "90px"} justifyContent={"center"}>
+        <Flex gap={isMobile ? "10px" : "90px"} justifyContent={"center"}>
           {categories.map((category, index) => (
             <Link to={categoryPaths[index]} key={index}>
               {" "}
