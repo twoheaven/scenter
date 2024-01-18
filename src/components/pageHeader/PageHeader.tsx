@@ -125,7 +125,7 @@ const SubTabs = ({ tabs, activeTab, onClickTab }: TabProps) => {
             >
               <Text
                 size={isMobile ? "0.75rem" : "0.875rem"}
-                color={isActive ? colorSet.text : colorSet.textLight}
+                color={isActive ? "white" : colorSet.textLight}
               >
                 {tab.text}
               </Text>
