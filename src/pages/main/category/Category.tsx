@@ -1,4 +1,4 @@
-import { Area, Button, Content, Text } from "@dohyun-ko/react-atoms";
+import { Area, Button, Content, Flex, Text } from "@dohyun-ko/react-atoms";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import colorSet from "src/styles/color-set";
@@ -11,7 +11,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 const StyledFlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%; /* 전체 너비 사용 */
+  width: 80%; /* 전체 너비 사용 */
 `;
 
 // Category 컴포넌트의 프로퍼티 정의
@@ -37,6 +37,7 @@ const Category = ({}: CategoryProps) => {
     <Area>
       <Content>
         {/* 카테고리 버튼들을 포함한 Flex 컴포넌트 */}
+        <Flex justifyContent="center">
         <StyledFlexContainer>
           {categories.map((category, index) => (
             <Link to={categoryPaths[index]} key={index}>
@@ -63,6 +64,7 @@ const Category = ({}: CategoryProps) => {
             </Link>
           ))}
         </StyledFlexContainer>
+        </Flex>
       </Content>
     </Area>
   );
