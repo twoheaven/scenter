@@ -232,7 +232,7 @@ const BannerSection = ({}: BannerSectionProps) => {
                         <Text
                           font={Fonts.Bold}
                           size={isMobile ? "10px" : "20px"}
-                          color="#00A0E9"
+                          color="#005D8A"
                         >{`공연문의하기 >`}</Text>
                       </Button>
 

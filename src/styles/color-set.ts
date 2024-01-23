@@ -1,6 +1,7 @@
 const colorSet = {
-  primary: "#1877F2",
+  // primary: "#1877F2",
 
+  primary: "#005D8A",
   text: "#2B2B2B",
   textLight: "#999999",
   textDark: "#000000",

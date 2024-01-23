@@ -17,11 +17,11 @@ import colorSet from "src/styles/color-set";
 import Paths from "src/types/paths";
 
 import facebookLogo from "@/assets/facebook-logo.svg";
-import instagramLogo from "@/assets/instagram-logo.svg";
+import instagramLogo from "@/assets/instagram-logo.png";
 // 로고 이미지 가져오기
 import Logo from "@/assets/logo.png";
 import naverBlogLogo from "@/assets/naver-blog-logo.png";
-import youtubeLogo from "@/assets/youtube-logo.svg";
+import youtubeLogo from "@/assets/youtube-logo.png";
 import useIsMobile from "@/hooks/useIsMobile";
 import Fonts from "@/styles/fonts";
 import { isLoggedIn } from "@/utils/utils";
@@ -132,7 +132,7 @@ const Header = ({}: HeaderProps) => {
           {/* 소셜 링크 모음 */}
           <Flex gap={"10px"} alignItems={"center"}>
             {/* YouTube 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://www.youtube.com/@buskingworld"}>
+            <WrapperLink to={"https://www.youtube.com"}>
               <img
                 src={youtubeLogo}
                 alt="유튜브"
@@ -143,9 +143,7 @@ const Header = ({}: HeaderProps) => {
             </WrapperLink>
 
             {/* Facebook 링크를 위한 WrapperLink */}
-            <WrapperLink
-              to={"https://www.facebook.com/profile.php?id=61551051985678"}
-            >
+            <WrapperLink to={"https://www.facebook.com"}>
               <img
                 src={facebookLogo}
                 alt="페이스북"
@@ -156,11 +154,7 @@ const Header = ({}: HeaderProps) => {
             </WrapperLink>
 
             {/* Instagram 링크를 위한 WrapperLink */}
-            <WrapperLink
-              to={
-                "https://instagram.com/buskingworld2023?igshid=MmU2YjMzNjRlOQ=="
-              }
-            >
+            <WrapperLink to={"https://instagram.com"}>
               <img
                 src={instagramLogo}
                 alt="인스타그램"
@@ -171,7 +165,7 @@ const Header = ({}: HeaderProps) => {
             </WrapperLink>
 
             {/* Naver 블로그 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://blog.naver.com/buskingworld"}>
+            <WrapperLink to={"https://blog.naver.com"}>
               <img
                 src={naverBlogLogo}
                 alt="네이버블로그"
