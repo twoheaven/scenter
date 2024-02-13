@@ -7,7 +7,6 @@ import {
   Spacer,
   Text,
 } from "@dohyun-ko/react-atoms";
-import { useNavigate } from "react-router-dom";
 import WrapperLink from "src/components/wrapperLink/WrapperLink";
 import Paths from "src/types/paths";
 import styled from "styled-components";
@@ -33,15 +32,10 @@ const StyledWrapperLink = styled(WrapperLink)`
   text-align: center; /* 텍스트 가운데 정렬 */
 `;
 
-// Header 컴포넌트의 프로퍼티를 정의하는 인터페이스
-interface Header2Props {}
-
 // Header를 나타내는 함수형 컴포넌트
-const Header2 = ({}: Header2Props) => {
+const Header2 = () => {
   // 모바일 환경 여부를 확인하는 커스텀 훅 사용
   const isMobile = useIsMobile();
-  // React Router의 navigate 훅 사용
-  const navigate = useNavigate();
 
   return (
     // Header 영역

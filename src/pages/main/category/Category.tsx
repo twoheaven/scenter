@@ -14,9 +14,6 @@ const StyledFlexContainer = styled.div`
   width: 80%; /* 전체 너비 사용 */
 `;
 
-// Category 컴포넌트의 프로퍼티 정의
-interface CategoryProps {}
-
 const categories = ["공연팀", "연예인", "행사", "파티", "교육", "시스템"];
 const categoryPaths = [
   Paths.Teams,
@@ -28,7 +25,7 @@ const categoryPaths = [
 ];
 
 // Category 컴포넌트 정의
-const Category = ({}: CategoryProps) => {
+const Category = () => {
   // 모바일 환경 여부를 확인하는 커스텀 훅 사용
   const isMobile = useIsMobile();
   const [activeIndex, setActiveIndex] = useState(-1);

@@ -327,7 +327,7 @@ const TeamDetailPage = () => {
 const TeamInfoCard = () => {
   const { id } = useParams();
 
-  const { data, isError } = useQuery(
+  const { data } = useQuery(
     [
       QueryKeys.getText,
       {

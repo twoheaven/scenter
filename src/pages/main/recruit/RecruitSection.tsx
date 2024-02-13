@@ -21,9 +21,7 @@ import Fonts from "@/styles/fonts";
 import QueryKeys from "@/types/queryKeys";
 import { getYoutubeVideoId, isLoggedIn } from "@/utils/utils";
 
-interface RecruitSectionProps {}
-
-const RecruitSection = ({}: RecruitSectionProps) => {
+const RecruitSection = () => {
   const { data } = useQuery([QueryKeys.getRecruits], getRecruits);
 
   const isMobile = useIsMobile();

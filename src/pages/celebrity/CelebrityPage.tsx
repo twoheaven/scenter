@@ -11,10 +11,8 @@ import { Division } from "@/types/interfaces";
 import QueryKeys from "@/types/queryKeys";
 import { divideTexts } from "@/utils/utils";
 
-interface CelebrityPageProps {}
-
-const CelebrityPage = ({}: CelebrityPageProps) => {
-  const [activeTab, setActiveTab] = useAtom(activeTabAtom);
+const CelebrityPage = () => {
+  const [activeTab] = useAtom(activeTabAtom);
 
   const { data } = useQuery([QueryKeys.getTexts], getTexts);
 

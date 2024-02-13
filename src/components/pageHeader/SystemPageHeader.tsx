@@ -4,9 +4,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 
 import PageHeader from "./PageHeader";
 
-interface SystemPageHeaderProps {}
-
-const SystemPageHeader = ({}: SystemPageHeaderProps) => {
+const SystemPageHeader = () => {
   // 화면 크기에 따라 모바일 여부를 판별합니다.
   const isMobile = useIsMobile();
 

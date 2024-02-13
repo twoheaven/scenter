@@ -28,11 +28,8 @@ import { isLoggedIn } from "@/utils/utils";
 
 import RecommendItem from "./RecommendItem";
 
-// RecommendSection 컴포넌트의 프로퍼티 정의
-interface RecommendSectionProps {}
-
 // RecommendSection 컴포넌트 정의
-const RecommendSection = ({}: RecommendSectionProps) => {
+const RecommendSection = () => {
   // useQuery 훅을 사용하여 추천 공연팀 데이터를 가져옴
   const { data } = useQuery([QueryKeys.getRecommend], getRecommend);
   // 사용자가 입력한 공연팀 ID 문자열을 상태로 관리

@@ -16,11 +16,9 @@ import useIsMobile from "@/hooks/useIsMobile";
 import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
 import QueryKeys from "@/types/queryKeys";
-import { filterCelebrities, filterSystems, filterTeams } from "@/utils/utils";
+import { filterCelebrities, filterTeams } from "@/utils/utils";
 
-interface SearchPageProps {}
-
-const SearchPage = ({}: SearchPageProps) => {
+const SearchPage = () => {
   const [searchParams] = useSearchParams();
 
   const searchKeyword = searchParams.get("keyword");

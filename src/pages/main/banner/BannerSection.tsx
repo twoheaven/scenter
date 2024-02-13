@@ -8,24 +8,16 @@ import { toast } from "react-toastify";
 import Paths from "src/types/paths";
 
 import { deleteBanner, getBanners, postBanner } from "@/apis/banner-api";
-import WrapperLink from "@/components/wrapperLink/WrapperLink";
 import useIsMobile from "@/hooks/useIsMobile";
 import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
 import QueryKeys from "@/types/queryKeys";
 import { isLoggedIn } from "@/utils/utils";
 
-import kakaoLogo from "./assets/kakao-logo.svg";
-
-// BannerSection 컴포넌트의 프로퍼티 정의
-interface BannerSectionProps {}
-
 // BannerSection 컴포넌트 정의
-const BannerSection = ({}: BannerSectionProps) => {
+const BannerSection = () => {
   // 배너 데이터를 가져오기 위한 React Query 훅 사용
   const { data } = useQuery([QueryKeys.getBanners], getBanners);
-  // 배너 섹션의 배경색을 동적으로 변경하기 위한 상태
-  const [backgroundColor, setBackgroundColor] = useState<string>("white");
   // 슬라이드 인덱스를 관리하는 상태
   const [index, setIndex] = useState<number>(0);
   // 새로운 배너 이미지를 저장하는 상태

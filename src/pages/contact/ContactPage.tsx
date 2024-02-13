@@ -20,9 +20,7 @@ import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
 import Paths from "@/types/paths";
 
-interface ContactPageProps {}
-
-const ContactPage = ({}: ContactPageProps) => {
+const ContactPage = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [content, setContent] = useState("");

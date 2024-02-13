@@ -1,14 +1,9 @@
-import { Area, Content, Flex, Grid, Spacer } from "@dohyun-ko/react-atoms";
+import { Area, Content, Flex, Spacer } from "@dohyun-ko/react-atoms";
 
 import Intro from "@/assets/intro";
 import PartyPageHeader from "@/components/pageHeader/PartyPageHeader";
-import useIsMobile from "@/hooks/useIsMobile";
 
-interface PartyPageProps {}
-
-const PartyPage = ({}: PartyPageProps) => {
-  const isMobile = useIsMobile();
-
+const PartyPage = () => {
   return (
     <Area>
       <Spacer height={"50px"} />

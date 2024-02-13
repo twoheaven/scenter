@@ -31,9 +31,7 @@ import { Division } from "@/types/interfaces";
 import Paths from "@/types/paths";
 import QueryKeys from "@/types/queryKeys";
 
-interface ContentCreateProps {}
-
-const ContentCreate = ({}: ContentCreateProps) => {
+const ContentCreate = () => {
   const [searchParams] = useSearchParams();
   const { data } = useQuery(
     [

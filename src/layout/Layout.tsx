@@ -57,11 +57,8 @@ export const ModalBackdrop = styled.div`
   animation-fill-mode: forwards;
 `;
 
-// 메인 레이아웃 컴포넌트의 속성을 위한 인터페이스
-interface LayoutProps {}
-
 // 메인 레이아웃 컴포넌트
-const Layout = ({}: LayoutProps) => {
+const Layout = () => {
   // jotai 상태 관리를 사용하여 모달 목록을 관리하는 상태
   const [modalList, setModalList] = useAtom(modalListAtom);
 

@@ -145,7 +145,7 @@ interface FilterProps {
 }
 
 // 페이지 헤더 필터 컴포넌트 정의
-const Filter = ({ filters, selectedFilter, onClickFilter }: FilterProps) => {
+const Filter = ({ filters, onClickFilter }: FilterProps) => {
   return (
     <Flex
       width={"100%"}

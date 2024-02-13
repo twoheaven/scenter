@@ -10,9 +10,7 @@ import { divisionAtom } from "@/store";
 import QueryKeys from "@/types/queryKeys";
 import { divideTexts } from "@/utils/utils";
 
-interface TeamPageProps {}
-
-const TeamPage = ({}: TeamPageProps) => {
+const TeamPage = () => {
   const { data } = useQuery([QueryKeys.getTexts], getTexts);
   const [division] = useAtom(divisionAtom);
 

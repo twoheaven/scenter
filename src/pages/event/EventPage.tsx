@@ -1,15 +1,10 @@
 import { Area, Content, Flex, Spacer } from "@dohyun-ko/react-atoms";
 
 import EventPageHeader from "@/components/pageHeader/EventPageHeader";
-import useIsMobile from "@/hooks/useIsMobile";
 
 import Intro from "../../assets/intro";
 
-interface EventPageProps {}
-
-const EventPage = ({}: EventPageProps) => {
-  const isMobile = useIsMobile();
-
+const EventPage = () => {
   return (
     <Area>
       <Spacer height={"50px"} />

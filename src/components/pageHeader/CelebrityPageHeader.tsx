@@ -9,10 +9,7 @@ import Paths from "@/types/paths";
 
 import PageHeader from "./PageHeader";
 
-// CelebrityPageHeader 컴포넌트의 Props를 정의합니다.
-interface CelebrityPageHeaderProps {}
-
-const CelebrityPageHeader = ({}: CelebrityPageHeaderProps) => {
+const CelebrityPageHeader = () => {
   // Jotai에서 상태를 가져와서 사용합니다.
   const [activeTab, setActiveTab] = useAtom(activeTabAtom);
   const [, setDivision] = useAtom(divisionAtom);
@@ -30,7 +27,7 @@ const CelebrityPageHeader = ({}: CelebrityPageHeaderProps) => {
     if (!isCelebTab) {
       setActiveTab(CelebrityTabs[0]);
     }
-  }, [activeTab, setDivision]);
+  }, [activeTab, setActiveTab, setDivision]);
 
   // 화면 크기에 따라 모바일 여부를 판별합니다.
   const isMobile = useIsMobile();

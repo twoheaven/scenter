@@ -14,9 +14,7 @@ import Paths from "@/types/paths";
 
 import PageHeader from "./PageHeader";
 
-interface TeamPageHeaderProps {}
-
-const TeamPageHeader = ({}: TeamPageHeaderProps) => {
+const TeamPageHeader = () => {
   const [activeTab, setActiveTab] = useAtom(activeTabAtom);
   const [activeSubTab, setActiveSubTab] = useAtom(activeSubTabAtom);
   const [, setDivision] = useAtom(divisionAtom);
@@ -35,7 +33,7 @@ const TeamPageHeader = ({}: TeamPageHeaderProps) => {
     if (!isCelebTab) {
       setActiveTab(TeamTabs[0]);
     }
-  }, [activeSubTab, setDivision]);
+  }, [activeSubTab, activeTab.name, setActiveTab, setDivision]);
 
   const isMobile = useIsMobile();
 

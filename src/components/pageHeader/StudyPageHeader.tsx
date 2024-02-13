@@ -4,9 +4,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 
 import PageHeader from "./PageHeader";
 
-interface StudyPageHeaderProps {}
-
-const StudyPageHeader = ({}: StudyPageHeaderProps) => {
+const StudyPageHeader = () => {
   const isMobile = useIsMobile();
 
   return (

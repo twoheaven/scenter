@@ -10,11 +10,8 @@ import {
 
 import colorSet from "@/styles/color-set";
 
-// Footer 컴포넌트의 프로퍼티를 정의하는 인터페이스
-interface FooterProps {}
-
 // 푸터를 나타내는 함수형 컴포넌트
-const Footer = ({}: FooterProps) => {
+const Footer = () => {
   return (
     // 푸터 영역
     <Area>

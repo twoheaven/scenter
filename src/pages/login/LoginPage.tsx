@@ -17,9 +17,7 @@ import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
 import Paths from "@/types/paths";
 
-interface LoginPageProps {}
-
-const LoginPage = ({}: LoginPageProps) => {
+const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 

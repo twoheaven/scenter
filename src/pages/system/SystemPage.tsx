@@ -1,14 +1,9 @@
-import { Area, Content, Flex, Grid, Spacer } from "@dohyun-ko/react-atoms";
+import { Area, Content, Flex, Spacer } from "@dohyun-ko/react-atoms";
 
 import Intro from "@/assets/intro";
 import SystemPageHeader from "@/components/pageHeader/SystemPageHeader";
-import useIsMobile from "@/hooks/useIsMobile";
 
-interface SystemPageProps {}
-
-const SystemPage = ({}: SystemPageProps) => {
-  const isMobile = useIsMobile();
-
+const SystemPage = () => {
   return (
     <Area>
       <Spacer height={"50px"} />

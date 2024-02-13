@@ -1,25 +1,16 @@
 import { Divider, Spacer } from "@dohyun-ko/react-atoms";
 import { useAtom } from "jotai";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import useIsMobile from "@/hooks/useIsMobile";
-import { activeTabAtom, divisionAtom, PartyTabs } from "@/store";
-import Paths from "@/types/paths";
+import { activeTabAtom, PartyTabs } from "@/store";
 
 import PageHeader from "./PageHeader";
 
-interface PartyPageHeaderProps {}
-
-const PartyPageHeader = ({}: PartyPageHeaderProps) => {
+const PartyPageHeader = () => {
   const isMobile = useIsMobile();
 
   // Jotai에서 상태를 가져와서 사용합니다.
-  const [activeTab, setActiveTab] = useAtom(activeTabAtom);
-  const [, setDivision] = useAtom(divisionAtom);
-
-  // react-router의 useNavigate 훅을 사용하여 페이지 이동을 처리합니다.
-  const navigate = useNavigate();
+  const [activeTab] = useAtom(activeTabAtom);
 
   return (
     <PageHeader>

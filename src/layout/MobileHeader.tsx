@@ -21,11 +21,8 @@ import Logo from "@/assets/logo.png";
 // 모바일 화면 여부를 확인하는 훅을 불러옵니다.
 import useIsMobile from "@/hooks/useIsMobile";
 
-// HeaderProps 인터페이스를 정의합니다.
-interface HeaderProps {}
-
 // 모바일 헤더 컴포넌트를 정의합니다.
-const MobileHeader = ({}: HeaderProps) => {
+const MobileHeader = () => {
   // 모바일 여부를 확인하는 훅을 사용합니다.
   const isMobile = useIsMobile();
 

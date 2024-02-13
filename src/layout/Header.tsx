@@ -22,19 +22,11 @@ import instagramLogo from "@/assets/instagram-logo.png";
 import Logo from "@/assets/logo.png";
 import naverBlogLogo from "@/assets/naver-blog-logo.png";
 import youtubeLogo from "@/assets/youtube-logo.png";
-import useIsMobile from "@/hooks/useIsMobile";
 import Fonts from "@/styles/fonts";
 import { isLoggedIn } from "@/utils/utils";
 
-import kakaoLogo from "../assets/kakao-logo.svg";
-
-// Header 컴포넌트의 프로퍼티를 정의하는 인터페이스
-interface HeaderProps {}
-
 // Header를 나타내는 함수형 컴포넌트
-const Header = ({}: HeaderProps) => {
-  // 모바일 환경 여부를 확인하는 커스텀 훅 사용
-  const isMobile = useIsMobile();
+const Header = () => {
   // React Router의 navigate 훅 사용
   const navigate = useNavigate();
 

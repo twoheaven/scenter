@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Spacer, Text } from "@dohyun-ko/react-atoms";
+import { Flex, Spacer, Text } from "@dohyun-ko/react-atoms";
 import styled from "styled-components";
 
 import defaultImage from "@/assets/default-image.svg";

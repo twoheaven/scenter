@@ -6,9 +6,7 @@ import Field from "./field/Field";
 import RecommendSection from "./recommend/RecommendSection";
 import RecruitSection from "./recruit/RecruitSection";
 
-interface MainPageProps {}
-
-const MainPage = ({}: MainPageProps) => {
+const MainPage = () => {
   return (
     <>
       <BannerSection />

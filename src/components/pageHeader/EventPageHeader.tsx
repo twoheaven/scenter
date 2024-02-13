@@ -4,9 +4,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 
 import PageHeader from "./PageHeader";
 
-interface EventPageHeaderProps {}
-
-const EventPageHeader = ({}: EventPageHeaderProps) => {
+const EventPageHeader = () => {
   const isMobile = useIsMobile();
 
   return (
