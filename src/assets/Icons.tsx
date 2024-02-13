@@ -1,12 +1,5 @@
 import { CSSProperties } from "react";
 
-import celebrity from "./celebrity.png";
-import eventimg from "./eventimg.png";
-import liveMusicGray from "./live-music-gray.png";
-import party from "./party.png";
-import speaker from "./speaker.png";
-import study from "./study.png";
-
 interface IconProps {
   size?: CSSProperties["width"];
   color?: CSSProperties["color"];
@@ -14,32 +7,6 @@ interface IconProps {
 
 const Icons = () => {
   return;
-};
-
-const Team = ({ size = "24px" }: IconProps) => {
-  return (
-    <img src={liveMusicGray} alt={"live music"} width={size} height={size} />
-  );
-};
-
-const Star = ({ size = "24px" }: IconProps) => {
-  return <img src={celebrity} alt={"celebrity"} width={size} height={size} />;
-};
-
-const Speaker = ({ size = "24px" }: IconProps) => {
-  return <img src={speaker} alt={"settings"} width={size} height={size} />;
-};
-
-const Party = ({ size = "24px" }: IconProps) => {
-  return <img src={party} alt={"settings"} width={size} height={size} />;
-};
-
-const Event = ({ size = "24px" }: IconProps) => {
-  return <img src={eventimg} alt={"settings"} width={size} height={size} />;
-};
-
-const Study = ({ size = "24px" }: IconProps) => {
-  return <img src={study} alt={"settings"} width={size} height={size} />;
 };
 
 const Search = ({ size = "24px", color = "#000000" }: IconProps) => {
@@ -87,14 +54,7 @@ const ArrowLeft = ({ size = "24px", color = "#000000" }: IconProps) => {
   );
 };
 
-Icons.Team = Team;
-Icons.Star = Star;
-Icons.Speaker = Speaker;
 Icons.Search = Search;
-
-Icons.Party = Party;
-Icons.Event = Event;
-Icons.Study = Study;
 
 Icons.ArrowLeft = ArrowLeft;
 Icons.ArrowRight = ArrowRight;

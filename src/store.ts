@@ -259,5 +259,6 @@ export const PartyTabs: Tab[] = [
 export const modalListAtom = atom<React.ReactNode[]>([]);
 
 export const activeTabAtom = atom<Tab>(TeamTabs[0]);
-export const activeSubTabAtom = atom<Tab>(TeamTabs[0].subTabs![0]);
+const defaultSubTab = TeamTabs[0].subTabs && TeamTabs[0].subTabs[0];
+export const activeSubTabAtom = atom<Tab>(defaultSubTab || TeamTabs[0]);
 export const divisionAtom = atom<Division>(Division.BUSKING_ACOUSTIC_BAND);
