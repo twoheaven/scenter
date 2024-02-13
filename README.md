@@ -1,4 +1,4 @@
-# GIST Infoteam Frontend Template
+# Frontend Template
 
 ## 구성 요소
 
