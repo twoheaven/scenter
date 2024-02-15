@@ -58,7 +58,7 @@ const Field = ({}: FieldProps) => {
           }}
         >
           <Text size={isMobile ? "1.5rem" : "1.875rem"}>
-            현장{" "}
+            <Highlight color={colorSet.primary}>현장</Highlight>{" "}
             <Highlight
               color={colorSet.text}
               style={{

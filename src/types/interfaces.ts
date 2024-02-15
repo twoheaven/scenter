@@ -61,6 +61,8 @@ export interface Recommend {
   id4: string | null;
   id5: string | null;
   id6: string | null;
+  id7: string | null;
+  id8: string | null;
 }
 
 // 채용 정보와 관련된 인터페이스입니다. YouTube 링크를 포함합니다.

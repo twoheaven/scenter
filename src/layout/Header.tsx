@@ -5,48 +5,25 @@ import {
   Content,
   Divider,
   Flex,
-  Input,
+  Highlight,
   Spacer,
   Text,
 } from "@dohyun-ko/react-atoms";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import Icons from "src/assets/Icons";
 import WrapperLink from "src/components/wrapperLink/WrapperLink";
 import colorSet from "src/styles/color-set";
 import Paths from "src/types/paths";
 
 import facebookLogo from "@/assets/facebook-logo.svg";
-import instagramLogo from "@/assets/instagram-logo.png";
+import instagramLogo from "@/assets/instagram-logo.svg";
 // 로고 이미지 가져오기
 import Logo from "@/assets/logo.png";
 import naverBlogLogo from "@/assets/naver-blog-logo.png";
-import youtubeLogo from "@/assets/youtube-logo.png";
+import youtubeLogo from "@/assets/youtube-logo.svg";
 import Fonts from "@/styles/fonts";
 import { isLoggedIn } from "@/utils/utils";
 
 // Header를 나타내는 함수형 컴포넌트
 const Header = () => {
-  // React Router의 navigate 훅 사용
-  const navigate = useNavigate();
-
-  // 검색 폼 제출 처리 함수
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // 검색어 입력란 가져오기
-    const searchQuery = e.currentTarget.searchQuery as HTMLInputElement;
-
-    // 검색어가 없으면 경고 메시지 표시
-    if (!searchQuery.value) {
-      toast.warn("검색어를 입력해주세요");
-      return;
-    }
-
-    // 검색 결과 페이지로 이동
-    navigate(Paths.Search + "?keyword=" + searchQuery.value);
-  };
-
   return (
     // Header 영역
     <Area>
@@ -83,89 +60,69 @@ const Header = () => {
               </WrapperLink>
             )}
           </Flex>
-          <Flex gap={"30px"}>
-            <Text></Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-          </Flex>
-          {/* 오른쪽 섹션 - 검색 폼 및 문의 전화번호 */}
+          {/* 오른쪽 섹션 - 문의 전화번호 & SNS 링크 */}
           <Flex
             alignItems={"center"}
             justifyContent={"space-between"}
-            gap={"10px"}
+            gap={"15px"}
           >
-            {/* 검색 폼 */}
-            <form onSubmit={handleFormSubmit}>
-              <Flex alignItems={"center"}>
-                <Input
-                  width={"140px"}
-                  name={"searchQuery"}
-                  placeholder={"검색어를 입력하세요"}
+            {/* 문의 전화번호 */}
+            <Text color={"black"}>
+              <Highlight
+                color={"black"}
+                style={{
+                  fontFamily: Fonts.Bold,
+                }}
+              >
+                문의 : 0505-510-0202
+              </Highlight>
+            </Text>
+            {/* 소셜 링크 모음 */}
+            <Flex gap={"10px"} alignItems={"center"}>
+              {/* YouTube 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://www.youtube.com"}>
+                <img
+                  src={youtubeLogo}
+                  alt="유튜브"
                   style={{
-                    border: "none",
+                    width: "28px",
                   }}
                 />
-                <Button>
-                  <Icons.Search size={"24px"} color={colorSet.textLight} />
-                </Button>
-              </Flex>
-            </form>
+              </WrapperLink>
 
-            {/* 문의 전화번호 */}
-            <Text color={colorSet.textGray}>문의 : 0505-510-0202</Text>
-          </Flex>
-          {/* 소셜 링크 모음 */}
-          <Flex gap={"10px"} alignItems={"center"}>
-            {/* YouTube 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://www.youtube.com"}>
-              <img
-                src={youtubeLogo}
-                alt="유튜브"
-                style={{
-                  width: "28px",
-                }}
-              />
-            </WrapperLink>
+              {/* Facebook 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://www.facebook.com"}>
+                <img
+                  src={facebookLogo}
+                  alt="페이스북"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
 
-            {/* Facebook 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://www.facebook.com"}>
-              <img
-                src={facebookLogo}
-                alt="페이스북"
-                style={{
-                  width: "24px",
-                }}
-              />
-            </WrapperLink>
+              {/* Instagram 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://instagram.com"}>
+                <img
+                  src={instagramLogo}
+                  alt="인스타그램"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
 
-            {/* Instagram 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://instagram.com"}>
-              <img
-                src={instagramLogo}
-                alt="인스타그램"
-                style={{
-                  width: "24px",
-                }}
-              />
-            </WrapperLink>
-
-            {/* Naver 블로그 링크를 위한 WrapperLink */}
-            <WrapperLink to={"https://blog.naver.com"}>
-              <img
-                src={naverBlogLogo}
-                alt="네이버블로그"
-                style={{
-                  width: "24px",
-                }}
-              />
-            </WrapperLink>
+              {/* Naver 블로그 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://blog.naver.com"}>
+                <img
+                  src={naverBlogLogo}
+                  alt="네이버블로그"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
+            </Flex>
           </Flex>
         </Flex>
       </Content>

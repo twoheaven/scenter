@@ -48,7 +48,7 @@ const RecommendSection = () => {
     const idList = idString.split(",").map((id) => id.trim());
 
     // 입력된 공연팀 ID가 6개가 아닌 경우 경고 토스트 출력 후 함수 종료
-    if (idList.length !== 6) {
+    if (idList.length !== 8) {
       toast.warn("추천할 공연팀 ID를 6개 입력해주세요");
       return;
     }
@@ -65,6 +65,8 @@ const RecommendSection = () => {
             id4: idList[3],
             id5: idList[4],
             id6: idList[5],
+            id7: idList[6],
+            id8: idList[7],
           },
         },
         {
@@ -92,6 +94,8 @@ const RecommendSection = () => {
             id4: idList[3],
             id5: idList[4],
             id6: idList[5],
+            id7: idList[6],
+            id8: idList[7],
           },
         },
         {
@@ -126,7 +130,7 @@ const RecommendSection = () => {
           }}
         >
           <Text size={isMobile ? "1.5rem" : "1.875rem"}>
-            추천{" "}
+            <Highlight color={colorSet.primary}>인기</Highlight>{" "}
             <Highlight
               color={colorSet.text}
               style={{
@@ -194,7 +198,7 @@ const RecommendSection = () => {
         {data && (
           <Grid
             // 그리드의 열을 3개로 구성합니다.
-            gridTemplateColumns={"1fr 1fr 1fr"}
+            gridTemplateColumns={"1fr 1fr 1fr 1fr"}
             // 모바일 환경과 일반 환경에 따라 그리드 아이템 사이의 간격을 동적으로 조절합니다.
             gap={isMobile ? "10px" : "20px"}
           >
@@ -205,6 +209,8 @@ const RecommendSection = () => {
             {data.id4 && <RecommendItem teamId={Number(data.id4)} />}
             {data.id5 && <RecommendItem teamId={Number(data.id5)} />}
             {data.id6 && <RecommendItem teamId={Number(data.id6)} />}
+            {data.id7 && <RecommendItem teamId={Number(data.id7)} />}
+            {data.id8 && <RecommendItem teamId={Number(data.id8)} />}
           </Grid>
         )}
       </Content>

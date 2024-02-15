@@ -11,7 +11,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 const StyledFlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80%; /* 전체 너비 사용 */
+  width: 100%; /* 전체 너비 사용 */
 `;
 
 const categories = ["공연팀", "연예인", "행사", "파티", "교육", "시스템"];
@@ -35,32 +35,32 @@ const Category = () => {
       <Content>
         {/* 카테고리 버튼들을 포함한 Flex 컴포넌트 */}
         <Flex justifyContent="center">
-        <StyledFlexContainer>
-          {categories.map((category, index) => (
-            <Link to={categoryPaths[index]} key={index}>
-              {/* Link를 사용하여 페이지로 이동합니다. */}
-              <Button
-                key={index}
-                onMouseOver={() => setActiveIndex(index)}
-                onMouseOut={() => setActiveIndex(-1)}
-                backgroundColor={
-                  activeIndex === index ? colorSet.primary : "transparent"
-                }
-                borderRadius={"5px"}
-                style={{
-                  padding: "0 10px",
-                }}
-              >
-                <Text
-                  size={isMobile ? "0.8rem" : "1.5rem"}
-                  color={activeIndex === index ? "white" : "black"}
+          <StyledFlexContainer>
+            {categories.map((category, index) => (
+              <Link to={categoryPaths[index]} key={index}>
+                {/* Link를 사용하여 페이지로 이동합니다. */}
+                <Button
+                  key={index}
+                  onMouseOver={() => setActiveIndex(index)}
+                  onMouseOut={() => setActiveIndex(-1)}
+                  backgroundColor={
+                    activeIndex === index ? colorSet.primary : "transparent"
+                  }
+                  borderRadius={"5px"}
+                  style={{
+                    padding: "0 10px",
+                  }}
                 >
-                  {category}
-                </Text>
-              </Button>
-            </Link>
-          ))}
-        </StyledFlexContainer>
+                  <Text
+                    size={isMobile ? "0.8rem" : "1.5rem"}
+                    color={activeIndex === index ? "white" : "black"}
+                  >
+                    {category}
+                  </Text>
+                </Button>
+              </Link>
+            ))}
+          </StyledFlexContainer>
         </Flex>
       </Content>
     </Area>

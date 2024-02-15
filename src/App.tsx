@@ -1,3 +1,5 @@
+import "./index.css";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -46,7 +48,11 @@ const router = createBrowserRouter(
 
 // React Router의 RouterProvider를 사용하여 앱 전체에 라우터를 적용
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="layout">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
