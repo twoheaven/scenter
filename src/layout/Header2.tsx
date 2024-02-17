@@ -76,7 +76,7 @@ const Header2 = () => {
         <Spacer height={"5px"} />
         {/* Flex 컨테이너 - 공간을 벌려주고, 아이템을 가운데 정렬 */}
         <Container>
-          <Flex style={{ width: "25%" }}>
+          <Flex style={{ width: "27%" }}>
             <Text>
               <Highlight
                 color={colorSet.primary}
@@ -89,13 +89,16 @@ const Header2 = () => {
             </Text>
           </Flex>
           {/* 검색 폼 */}
-          <Flex justifyContent="center" style={{ width: "50%" }}>
-            <StyledButton>
+          <Flex
+            justifyContent="center"
+            style={isMobile ? { width: "50%" } : { width: "50%" }}
+          >
+            <StyledButton width={"100%"}>
               <form onSubmit={handleFormSubmit}>
-                <Flex alignItems="center">
+                <Flex alignItems="center" justifyContent={"space-between"}>
                   <img src={Logo} height={"30px"} />
                   <Input
-                    width={"70%"}
+                    width={"80%"}
                     name={"searchQuery"}
                     placeholder={"검색어를 입력하세요"}
                     style={{
@@ -111,7 +114,7 @@ const Header2 = () => {
           </Flex>
 
           {/* 카카오톡 채팅 링크 버튼 */}
-          <Flex style={{ width: "25%" }}>
+          <Flex style={{ width: "20%" }}>
             <WrapperLink
               to={"https://pf.kakao.com/_cVkMG/chat"}
               style={{ marginLeft: "auto" }}

@@ -1,23 +1,14 @@
 // 필요한 컴포넌트 및 라이브러리를 불러옵니다.
-import {
-  Area,
-  Button,
-  Content,
-  Divider,
-  Flex,
-  Input,
-  Spacer,
-  Text,
-} from "@dohyun-ko/react-atoms";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import Icons from "src/assets/Icons";
+import { Area, Content, Divider, Flex, Text } from "@dohyun-ko/react-atoms";
 import WrapperLink from "src/components/wrapperLink/WrapperLink";
-import colorSet from "src/styles/color-set";
 import Paths from "src/types/paths";
 
+import facebookLogo from "@/assets/facebook-logo.svg";
+import instagramLogo from "@/assets/instagram-logo.svg";
 // 로고 이미지를 불러옵니다.
 import Logo from "@/assets/logo.png";
+import naverBlogLogo from "@/assets/naver-blog-logo.png";
+import youtubeLogo from "@/assets/youtube-logo.svg";
 // 모바일 화면 여부를 확인하는 훅을 불러옵니다.
 import useIsMobile from "@/hooks/useIsMobile";
 
@@ -26,31 +17,10 @@ const MobileHeader = () => {
   // 모바일 여부를 확인하는 훅을 사용합니다.
   const isMobile = useIsMobile();
 
-  // React Router의 useNavigate 훅을 사용하여 페이지 이동을 처리합니다.
-  const navigate = useNavigate();
-
-  // 검색 폼 제출 이벤트 핸들러를 정의합니다.
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // 검색어 입력란을 가져옵니다.
-    const searchQuery = e.currentTarget.searchQuery as HTMLInputElement;
-
-    // 검색어가 없는 경우 경고 메시지를 토스트로 표시하고 함수를 종료합니다.
-    if (!searchQuery.value) {
-      toast.warn("검색어를 입력해주세요");
-      return;
-    }
-
-    // 검색 결과 페이지로 이동합니다.
-    navigate(Paths.Search + "?keyword=" + searchQuery.value);
-  };
-
   // 모바일 헤더 컴포넌트의 렌더링을 수행합니다.
   return (
     <Area>
       <Content>
-        <Spacer height={"2px"} />
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}
@@ -66,7 +36,7 @@ const MobileHeader = () => {
           </Flex>
 
           {/* 메뉴 항목들을 WrapperLink 컴포넌트로 감싸서 각 페이지로 이동할 수 있도록 합니다. */}
-          <Flex gap={"10px"} justifyContent={"flex-start"}>
+          {/* <Flex gap={"10px"} justifyContent={"flex-start"}>
             <WrapperLink to={Paths.Teams}>
               <Text size={"0.875rem"}>공연팀</Text>
             </WrapperLink>
@@ -90,32 +60,56 @@ const MobileHeader = () => {
             <WrapperLink to={Paths.Systems}>
               <Text size={"0.875rem"}>시스템</Text>
             </WrapperLink>
-          </Flex>
+          </Flex> */}
+          <Flex alignItems={"center"} gap={"10px"}>
+            <Text size={"15px"}>문의 : 0505-510-0202</Text>
+            {/* 소셜 링크 모음 */}
+            <Flex gap={"10px"} alignItems={"center"}>
+              {/* YouTube 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://www.youtube.com"}>
+                <img
+                  src={youtubeLogo}
+                  alt="유튜브"
+                  style={{
+                    width: "28px",
+                  }}
+                />
+              </WrapperLink>
 
-          {/* 여백을 주어 간격을 조절합니다. */}
-          <Flex gap={"50px"}>
-            <Text>　</Text>
-            <Text>　</Text>
-            <Text>　</Text>
-          </Flex>
+              {/* Facebook 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://www.facebook.com"}>
+                <img
+                  src={facebookLogo}
+                  alt="페이스북"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
 
-          {/* 검색 폼을 렌더링합니다. */}
-          <form onSubmit={handleFormSubmit}>
-            <Flex alignItems={"center"}>
-              <Input
-                width={"120px"}
-                name={"searchQuery"}
-                placeholder={"검색어를 입력하세요"}
-                style={{
-                  border: "none",
-                  fontSize: "14px",
-                }}
-              />
-              <Button>
-                <Icons.Search size={"18px"} color={colorSet.textLight} />
-              </Button>
+              {/* Instagram 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://instagram.com"}>
+                <img
+                  src={instagramLogo}
+                  alt="인스타그램"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
+
+              {/* Naver 블로그 링크를 위한 WrapperLink */}
+              <WrapperLink to={"https://blog.naver.com"}>
+                <img
+                  src={naverBlogLogo}
+                  alt="네이버블로그"
+                  style={{
+                    width: "24px",
+                  }}
+                />
+              </WrapperLink>
             </Flex>
-          </form>
+          </Flex>
         </Flex>
       </Content>
 

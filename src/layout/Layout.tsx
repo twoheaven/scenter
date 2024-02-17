@@ -18,6 +18,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Header2 from "./Header2";
 import MobileHeader from "./MobileHeader";
+import MobileHeader2 from "./MobileHeader2 ";
 import MobileProvider from "./MobileProvider";
 
 // 페이드 인 애니메이션을 위한 키프레임 정의
@@ -120,7 +121,7 @@ const HeaderWrapper = () => {
 const Header2Wrapper = () => {
   const isMobile = useIsMobile();
 
-  return isMobile ? "" : <Header2 />;
+  return isMobile ? <MobileHeader2 /> : <Header2 />;
 };
 
 // 메인 레이아웃 컴포넌트를 기본 내보내기로 설정
