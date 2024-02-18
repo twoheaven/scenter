@@ -35,9 +35,7 @@ const Container = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  background-color: #fff;
-  color: #fff;
-  border: 2px solid #007bff;
+  border: 2px solid #005d8a;
   padding: 2px 10px;
   cursor: pointer;
   border-radius: 20px;
@@ -93,7 +91,7 @@ const Header2 = () => {
             justifyContent="center"
             style={isMobile ? { width: "50%" } : { width: "50%" }}
           >
-            <StyledButton width={"100%"}>
+            <StyledButton width={"100%"} color={colorSet.primary}>
               <form onSubmit={handleFormSubmit}>
                 <Flex alignItems="center" justifyContent={"space-between"}>
                   <img src={Logo} height={"30px"} />
