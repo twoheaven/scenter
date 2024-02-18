@@ -50,7 +50,7 @@ const TeamCard = ({ team }: TeamCardProps) => {
             style={{
               width: "100%",
               aspectRatio: "1/1",
-              objectFit: "cover",
+              objectFit: "fill",
               height: "auto",
             }}
           />

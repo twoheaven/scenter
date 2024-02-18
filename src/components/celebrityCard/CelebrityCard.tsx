@@ -50,7 +50,7 @@ const CelebrityCard = ({ team }: CelebrityCardProps) => {
             style={{
               width: "100%",
               aspectRatio: "1/1",
-              objectFit: "cover",
+              objectFit: "fill",
               height: "auto",
             }}
           />
