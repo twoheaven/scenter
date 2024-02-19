@@ -11,6 +11,7 @@ import naverBlogLogo from "@/assets/naver-blog-logo.png";
 import youtubeLogo from "@/assets/youtube-logo.svg";
 // 모바일 화면 여부를 확인하는 훅을 불러옵니다.
 import useIsMobile from "@/hooks/useIsMobile";
+import Fonts from "@/styles/fonts";
 
 // 모바일 헤더 컴포넌트를 정의합니다.
 const MobileHeader = () => {
@@ -62,7 +63,15 @@ const MobileHeader = () => {
             </WrapperLink>
           </Flex> */}
           <Flex alignItems={"center"} gap={"10px"}>
-            <Text size={"15px"}>문의 : 0505-510-0202</Text>
+            <Text
+              color={"black"}
+              style={{
+                fontFamily: Fonts.Bold,
+              }}
+              size={"15px"}
+            >
+              문의 : 0505-510-0202
+            </Text>
             {/* 소셜 링크 모음 */}
             <Flex gap={"10px"} alignItems={"center"}>
               {/* YouTube 링크를 위한 WrapperLink */}

@@ -115,7 +115,7 @@ const Header2 = () => {
           </Flex>
 
           {/* 카카오톡 채팅 링크 버튼 */}
-          <Flex style={{ width: "20%" }}>
+          <Flex style={{ width: "20%", minWidth: "151.75px" }}>
             <WrapperLink
               to={"https://pf.kakao.com/_cVkMG/chat"}
               style={{ marginLeft: "auto" }}
