@@ -1,4 +1,6 @@
 // 필요한 컴포넌트 및 라이브러리 가져오기
+import "@/index.css";
+
 import {
   Area,
   Button,
@@ -79,7 +81,8 @@ const Header2 = () => {
               <Highlight
                 color={colorSet.primary}
                 style={{
-                  fontFamily: Fonts.Bold,
+                  fontFamily: "G마켓 산스",
+                  fontWeight: "bold",
                 }}
               >
                 대한민국 공연 전문 1위 기업 SC Ent
