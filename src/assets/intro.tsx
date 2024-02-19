@@ -1,9 +1,9 @@
 import useIsMobile from "@/hooks/useIsMobile";
 
-import eventImg1 from "./event_img1.jpg";
-import partyImg1 from "./party_img1.jpg";
-import studyImg1 from "./study_img1.jpg";
-import systemImg1 from "./system_img1.jpg";
+import studyImg1 from "./교육.png";
+import systemImg1 from "./시스템.png";
+import partyImg1 from "./파티.png";
+import eventImg1 from "./행사.png";
 
 const Intro = () => {
   return;
@@ -18,6 +18,10 @@ const EventIntro1 = () => {
         src={eventImg1}
         alt={"eventImg1"}
         width={isMobile ? "300px" : "1240px"}
+        style={{
+          background:
+            "linear-gradient(180deg, #e6e6e6 0%, #e9e9e9 1.63%, #f6f6f6 10.7%, #fdfdfd 22.82%, #ffffff 50.56%, #fdfdfd 78.98%, #f6f6f6 89.29%, #ebebeb 96.64%, #e2e2e2 100%)",
+        }}
       />
     </>
   );
