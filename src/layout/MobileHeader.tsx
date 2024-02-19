@@ -68,7 +68,7 @@ const MobileHeader = () => {
               style={{
                 fontFamily: Fonts.Bold,
               }}
-              size={"15px"}
+              size={"12px"}
             >
               문의 : 0505-510-0202
             </Text>
