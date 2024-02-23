@@ -143,7 +143,9 @@ const ContactPage = () => {
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
-              placeholder={"연락처를 입력하세요 예) 01012345678"}
+              placeholder={
+                "연락처를 입력하세요 예) 01012345678 & example@naver.com"
+              }
               style={{
                 border: `1px solid ${colorSet.lineGray}`,
                 borderRadius: "10px",
