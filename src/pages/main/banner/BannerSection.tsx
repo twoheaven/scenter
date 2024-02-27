@@ -99,7 +99,6 @@ const BannerSection = () => {
       clearInterval(interval);
     };
   }, [data]);
-
   // JSX 반환
   return (
     <>
@@ -146,7 +145,7 @@ const BannerSection = () => {
       >
         <Content>
           {data && data.length > 0 && (
-            <Flex justifyContent={"center"} width={"100%"}>
+            <Flex justifyContent={"center"} width={"100%"} gap={"0.5px"}>
               {/* SwipeableViews를 사용한 배너 슬라이드 */}
               <SwipeableViews
                 index={index}
@@ -156,25 +155,25 @@ const BannerSection = () => {
                 enableMouseEvents
                 style={{
                   width: "100%",
+                  overflow: "hidden",
                 }}
               >
                 {data.map((banner) => (
                   <Flex
                     key={banner.id}
-                    width={"100%"}
+                    width={"99%"}
                     style={{
                       position: "relative",
                     }}
                   >
                     {/* 배너 이미지 표시 */}
                     <img
-                      width={"100%"}
                       src={banner.storedFilePath}
                       alt={banner.originalFileName}
                       style={{
                         pointerEvents: "none",
-                        width: "100%",
                         minWidth: "100%",
+                        border: `0.5px solid ${banner.backcolor}`,
                       }}
                     />
                     {/* 로그인 상태에서만 삭제 버튼 표시 */}
@@ -224,7 +223,7 @@ const BannerSection = () => {
                         <Text
                           font={Fonts.Bold}
                           size={isMobile ? "10px" : "20px"}
-                          color="#005D8A"
+                          color={banner.backcolor}
                         >{`공연문의하기 >`}</Text>
                       </Button>
 
