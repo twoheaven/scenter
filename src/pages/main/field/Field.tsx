@@ -66,6 +66,7 @@ const Field = ({}: FieldProps) => {
             </Highlight>
           </Text>
         </Flex>
+        <Spacer height={"20px"} />
         <Flex justifyContent="center" width={"100%"}>
           <Grid
             gridTemplateColumns={isMobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr"}
