@@ -15,6 +15,7 @@ const Distance = () => {
 };
 
 const FieldCard = ({ field }: FieldCardProps) => {
+  console.log("FieldCard received data:", field); // field 데이터를 콘솔에 출력
   const isMobile = useIsMobile();
 
   const Wrapper = styled.div`
@@ -67,14 +68,14 @@ const FieldCard = ({ field }: FieldCardProps) => {
           <Wrapper>
             <Spacer height={"5px"} />
             <Text size="20px" style={{ textAlign: "left" }}>
-              {title}ddddddddd
+              {title}
               <Distance />
               <Distance />
             </Text>
             <Spacer height={"5px"} />
 
             <Text style={{ textAlign: "left" }}>
-              {date}d
+              {date}
               <Distance />
               <Distance />
             </Text>
@@ -82,7 +83,7 @@ const FieldCard = ({ field }: FieldCardProps) => {
             <Spacer height={"2px"} />
 
             <Text style={{ textAlign: "left" }}>
-              출연진 : {location}
+              출연진 : {casting}
               <Distance />
               <Distance />
             </Text>
@@ -90,7 +91,7 @@ const FieldCard = ({ field }: FieldCardProps) => {
             <Spacer height={"2px"} />
 
             <Text style={{ textAlign: "left" }}>
-              {casting}d
+              {location}
               <Distance />
               <Distance />
             </Text>
