@@ -4,7 +4,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 
 import BannerSection from "./banner/BannerSection";
 import Category from "./category/Category";
-import Field from "./field/Field";
+import FieldSection from "./field/FieldSection";
 import RecommendSection from "./recommend/RecommendSection";
 import RecruitSection from "./recruit/RecruitSection";
 
@@ -35,7 +35,7 @@ const MainPage = () => {
 
       <RecruitSection />
 
-      <Field />
+      <FieldSection />
 
       <Spacer height={"50px"} />
     </>

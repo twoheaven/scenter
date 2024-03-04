@@ -7,33 +7,22 @@ import {
   Spacer,
   Text,
 } from "@dohyun-ko/react-atoms";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import useIsMobile from "@/hooks/useIsMobile";
 import colorSet from "@/styles/color-set";
 import Fonts from "@/styles/fonts";
+import { Field } from "@/types/interfaces";
+import { isLoggedIn } from "@/utils/utils";
 
 import FieldCard from "./FieldCard";
+import FieldUpdateModal from "./FieldUpdateModal";
 
-interface FieldProps {}
-
-interface Field {
-  id: number;
-  originalFileName: string;
-  storedFilePath: string;
-  fileSize: number;
-  title: string;
-  date: string;
-  location: string;
-  casting: string;
-}
-
-const Field = ({}: FieldProps) => {
+const FieldSection = () => {
   const isMobile = useIsMobile();
-  const [fields, setFields] = useState<Field[]>([]); // Field 타입의 배열로 초기화
+  const [fields, setFields] = useState<Field[]>([]);
 
   useEffect(() => {
-    // API 요청 보내기
     fetch("https://cat-project.xyz/api/fields/get")
       .then((response) => response.json())
       .then((data) => {
@@ -44,12 +33,11 @@ const Field = ({}: FieldProps) => {
       });
   }, []);
 
-  console.log("Field received data:", fields);
   return (
     <Area>
       <Content>
         <Flex
-          justifyContent={"center"}
+          justifyContent="center"
           style={{
             position: "relative",
           }}
@@ -66,21 +54,28 @@ const Field = ({}: FieldProps) => {
             </Highlight>
           </Text>
         </Flex>
-        <Spacer height={"20px"} />
-        <Flex justifyContent="center" width={"100%"}>
+        <Spacer height="20px" />
+        <Flex justifyContent="center" width="100%">
           <Grid
             gridTemplateColumns={isMobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr"}
-            gap={isMobile ? "3px" : "3px"}
+            gap="3px"
           >
             {fields.map((field) => (
-              <FieldCard key={field.id} field={field} />
+              <React.Fragment key={field.id}>
+                <FieldCard field={field} />
+                {isLoggedIn() && (
+                  <Flex flexDirection="column">
+                    <FieldUpdateModal field={field} />
+                  </Flex>
+                )}
+              </React.Fragment>
             ))}
           </Grid>
-          <Spacer height={"10px"} />
+          <Spacer height="10px" />
         </Flex>
       </Content>
     </Area>
   );
 };
 
-export default Field;
+export default FieldSection;

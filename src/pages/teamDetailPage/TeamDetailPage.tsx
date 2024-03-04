@@ -406,7 +406,9 @@ const TeamInfoCard = () => {
           height={"30px"}
           onClick={() => navigate(Paths.Contact)}
         >
-          <Text size={"12px"} color={"white"}>문의하기</Text>
+          <Text size={"12px"} color={"white"}>
+            문의하기
+          </Text>
         </Button>
       </Flex>
 
