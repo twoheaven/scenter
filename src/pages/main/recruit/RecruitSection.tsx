@@ -99,7 +99,14 @@ const RecruitSection = () => {
         }}
       >
         <Text size={isMobile ? "1.5rem" : "1.875rem"}>
-          <Highlight color={colorSet.primary}>인기</Highlight>{" "}
+          <Highlight
+            color={colorSet.primary}
+            style={{
+              fontFamily: Fonts.Bold,
+            }}
+          >
+            최근
+          </Highlight>{" "}
           <Highlight
             color={colorSet.text}
             style={{
