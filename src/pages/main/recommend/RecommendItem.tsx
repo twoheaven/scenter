@@ -33,7 +33,7 @@ const RecommendItem = ({ teamId }: RecommendItemProps) => {
       >
         <img
           src={data?.mainPicture?.storedFilePath || defaultImage.storedFilePath}
-          width={data?.mainPicture?.storedFilePath ? "100%" : "50%"}
+          width={data?.mainPicture?.storedFilePath ? "95%" : "50%"}
           style={{
             aspectRatio: "1/1",
           }}
