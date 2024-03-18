@@ -80,7 +80,9 @@ const Header = () => {
             {/* 소셜 링크 모음 */}
             <Flex gap={"10px"} alignItems={"center"}>
               {/* YouTube 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://www.youtube.com"}>
+              <WrapperLink
+                to={"https://www.youtube.com/channel/UCf4GpFPTt2TtZgu4pyNx0Qg"}
+              >
                 <img
                   src={youtubeLogo}
                   alt="유튜브"
@@ -91,7 +93,9 @@ const Header = () => {
               </WrapperLink>
 
               {/* Facebook 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://www.facebook.com"}>
+              <WrapperLink
+                to={"https://www.instagram.com/sc_ent_?igsh=OGQ5ZDc2ODk2ZA=="}
+              >
                 <img
                   src={facebookLogo}
                   alt="페이스북"
@@ -102,7 +106,9 @@ const Header = () => {
               </WrapperLink>
 
               {/* Instagram 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://instagram.com"}>
+              <WrapperLink
+                to={"https://www.instagram.com/sc_ent_?igsh=OGQ5ZDc2ODk2ZA=="}
+              >
                 <img
                   src={instagramLogo}
                   alt="인스타그램"
@@ -113,7 +119,7 @@ const Header = () => {
               </WrapperLink>
 
               {/* Naver 블로그 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://blog.naver.com"}>
+              <WrapperLink to={"https://m.blog.naver.com/scdata"}>
                 <img
                   src={naverBlogLogo}
                   alt="네이버블로그"

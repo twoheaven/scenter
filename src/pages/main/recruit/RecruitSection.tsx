@@ -78,7 +78,7 @@ const RecruitSection = () => {
       if (isMobile) {
         setYoutubeWidth(window.innerWidth - 50);
       } else {
-        setYoutubeWidth(Math.min(window.innerWidth * 0.98) / 2 - 10);
+        setYoutubeWidth(Math.min(window.innerWidth * 0.75) / 2 - 10);
       }
     };
     window.addEventListener("resize", onResize);

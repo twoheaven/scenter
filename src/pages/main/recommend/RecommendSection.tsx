@@ -160,66 +160,66 @@ const RecommendSection = () => {
             <Text color={colorSet.primary}>+더보기</Text>
           </WrapperLink>
         </Flex>
-      </Content>
-      {/* 로그인한 사용자에게만 표시되는 공연팀 ID 입력 폼과 수정 버튼 */}
-      {isLoggedIn() && (
-        <Flex gap={"10px"} alignItems={"center"}>
-          {/* 공연팀 ID 입력 폼 */}
-          <Input
-            width={"60%"}
-            value={idString}
-            onChange={(e) => {
-              setIdString(e.target.value);
-            }}
-            placeholder={
-              "추천할 공연팀 ID 6개를 콤마(,)로 구분하여 입력해주세요"
-            }
-            style={{
-              border: `1px solid ${colorSet.lineGray}`,
-              borderRadius: "10px",
-              padding: "8px 10px",
-            }}
-          />
+        {/* 로그인한 사용자에게만 표시되는 공연팀 ID 입력 폼과 수정 버튼 */}
+        {isLoggedIn() && (
+          <Flex gap={"10px"} alignItems={"center"}>
+            {/* 공연팀 ID 입력 폼 */}
+            <Input
+              width={"60%"}
+              value={idString}
+              onChange={(e) => {
+                setIdString(e.target.value);
+              }}
+              placeholder={
+                "추천할 공연팀 ID 6개를 콤마(,)로 구분하여 입력해주세요"
+              }
+              style={{
+                border: `1px solid ${colorSet.lineGray}`,
+                borderRadius: "10px",
+                padding: "8px 10px",
+              }}
+            />
 
-          {/* 수정 버튼 */}
-          <Button
-            backgroundColor={colorSet.primary}
-            onClick={handleRecommendSubmit}
-            style={{
-              padding: "5px 10px",
-              borderRadius: "3px",
-            }}
+            {/* 수정 버튼 */}
+            <Button
+              backgroundColor={colorSet.primary}
+              onClick={handleRecommendSubmit}
+              style={{
+                padding: "5px 10px",
+                borderRadius: "3px",
+              }}
+            >
+              <Text>수정하기</Text>
+            </Button>
+
+            {/* 안내 메시지 */}
+            <Text>공연팀 ID는 공연팀 상세페이지 주소 뒤에 있는 숫자입니다</Text>
+          </Flex>
+        )}
+
+        {/* 섹션 간 간격 */}
+        <Spacer height={"30px"} />
+
+        {/* 추천 공연팀 목록 그리드 */}
+        {data && (
+          <Grid
+            // 그리드의 열을 3개로 구성합니다.
+            gridTemplateColumns={"1fr 1fr 1fr 1fr"}
+            // 모바일 환경과 일반 환경에 따라 그리드 아이템 사이의 간격을 동적으로 조절합니다.
+            gap={isMobile ? "10px" : "20px"}
           >
-            <Text>수정하기</Text>
-          </Button>
-
-          {/* 안내 메시지 */}
-          <Text>공연팀 ID는 공연팀 상세페이지 주소 뒤에 있는 숫자입니다</Text>
-        </Flex>
-      )}
-
-      {/* 섹션 간 간격 */}
-      <Spacer height={"30px"} />
-
-      {/* 추천 공연팀 목록 그리드 */}
-      {data && (
-        <Grid
-          // 그리드의 열을 3개로 구성합니다.
-          gridTemplateColumns={"1fr 1fr 1fr 1fr"}
-          // 모바일 환경과 일반 환경에 따라 그리드 아이템 사이의 간격을 동적으로 조절합니다.
-          gap={isMobile ? "10px" : "20px"}
-        >
-          {/* 각 추천 공연팀에 대한 정보가 있을 경우에만 해당 공연팀을 렌더링합니다. */}
-          {data.id1 && <RecommendItem teamId={Number(data.id1)} />}
-          {data.id2 && <RecommendItem teamId={Number(data.id2)} />}
-          {data.id3 && <RecommendItem teamId={Number(data.id3)} />}
-          {data.id4 && <RecommendItem teamId={Number(data.id4)} />}
-          {data.id5 && <RecommendItem teamId={Number(data.id5)} />}
-          {data.id6 && <RecommendItem teamId={Number(data.id6)} />}
-          {data.id7 && <RecommendItem teamId={Number(data.id7)} />}
-          {data.id8 && <RecommendItem teamId={Number(data.id8)} />}
-        </Grid>
-      )}
+            {/* 각 추천 공연팀에 대한 정보가 있을 경우에만 해당 공연팀을 렌더링합니다. */}
+            {data.id1 && <RecommendItem teamId={Number(data.id1)} />}
+            {data.id2 && <RecommendItem teamId={Number(data.id2)} />}
+            {data.id3 && <RecommendItem teamId={Number(data.id3)} />}
+            {data.id4 && <RecommendItem teamId={Number(data.id4)} />}
+            {data.id5 && <RecommendItem teamId={Number(data.id5)} />}
+            {data.id6 && <RecommendItem teamId={Number(data.id6)} />}
+            {data.id7 && <RecommendItem teamId={Number(data.id7)} />}
+            {data.id8 && <RecommendItem teamId={Number(data.id8)} />}
+          </Grid>
+        )}
+      </Content>
     </Area>
   );
 };
