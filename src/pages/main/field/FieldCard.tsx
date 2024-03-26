@@ -15,7 +15,6 @@ const Distance = () => {
 };
 
 const FieldCard = ({ field }: FieldCardProps) => {
-  console.log("FieldCard received data:", field); // field 데이터를 콘솔에 출력
   const isMobile = useIsMobile();
 
   const Wrapper = styled.div`
