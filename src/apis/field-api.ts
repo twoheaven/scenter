@@ -59,7 +59,7 @@ export const putFieldImage = async (props: { id: number; image: File }) => {
     }
 
     const response: AxiosResponse = await axios.put(
-      `https://cat-project.xyz/api/fields/put/${id}/image`,
+      `https://mediarts.co.kr/api/fields/put/${id}/image`,
       formData,
       config,
     );
