@@ -36,32 +36,6 @@ const MobileHeader = () => {
             </WrapperLink>
           </Flex>
 
-          {/* 메뉴 항목들을 WrapperLink 컴포넌트로 감싸서 각 페이지로 이동할 수 있도록 합니다. */}
-          {/* <Flex gap={"10px"} justifyContent={"flex-start"}>
-            <WrapperLink to={Paths.Teams}>
-              <Text size={"0.875rem"}>공연팀</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Celebrities}>
-              <Text size={"0.875rem"}>연예인</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Event}>
-              <Text size={"0.875rem"}>행사</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Party}>
-              <Text size={"0.875rem"}>파티</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Study}>
-              <Text size={"0.875rem"}>교육</Text>
-            </WrapperLink>
-
-            <WrapperLink to={Paths.Systems}>
-              <Text size={"0.875rem"}>시스템</Text>
-            </WrapperLink>
-          </Flex> */}
           <Flex alignItems={"center"} gap={"10px"}>
             <Text
               color={"black"}
@@ -75,7 +49,9 @@ const MobileHeader = () => {
             {/* 소셜 링크 모음 */}
             <Flex gap={"10px"} alignItems={"center"}>
               {/* YouTube 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://www.youtube.com"}>
+              <WrapperLink
+                to={"https://www.youtube.com/channel/UCf4GpFPTt2TtZgu4pyNx0Qg"}
+              >
                 <img
                   src={youtubeLogo}
                   alt="유튜브"
@@ -86,7 +62,9 @@ const MobileHeader = () => {
               </WrapperLink>
 
               {/* Facebook 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://www.facebook.com"}>
+              <WrapperLink
+                to={"https://www.instagram.com/sc_ent_?igsh=OGQ5ZDc2ODk2ZA=="}
+              >
                 <img
                   src={facebookLogo}
                   alt="페이스북"
@@ -97,7 +75,9 @@ const MobileHeader = () => {
               </WrapperLink>
 
               {/* Instagram 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://instagram.com"}>
+              <WrapperLink
+                to={"https://www.instagram.com/sc_ent_?igsh=OGQ5ZDc2ODk2ZA=="}
+              >
                 <img
                   src={instagramLogo}
                   alt="인스타그램"
@@ -108,7 +88,7 @@ const MobileHeader = () => {
               </WrapperLink>
 
               {/* Naver 블로그 링크를 위한 WrapperLink */}
-              <WrapperLink to={"https://blog.naver.com"}>
+              <WrapperLink to={"https://m.blog.naver.com/scdata"}>
                 <img
                   src={naverBlogLogo}
                   alt="네이버블로그"

@@ -101,7 +101,7 @@ const MobileHeader2 = () => {
         {/* 카카오톡 채팅 링크 버튼 */}
         <Flex justifyContent="start" style={{ width: "27%" }}>
           <WrapperLink
-            to={"https://pf.kakao.com/_cVkMG/chat"}
+            to={"http://pf.kakao.com/_LWxkSC"}
             style={{ marginLeft: "0px" }}
           >
             <Flex
