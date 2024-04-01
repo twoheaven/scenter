@@ -175,7 +175,7 @@ export const postSubPicture = async (props: { id: number; image: File }) => {
   const formData = new FormData();
   formData.append("imageFile", image);
   const { data } = await apiPoster<Team>(
-    `/api/texts/post/${id}/sub-pictures`,
+    `/api/texts/${id}/sub-pictures`,
     formData,
   );
   return data;
@@ -210,7 +210,7 @@ export const deleteSubPicture = async ({
  */
 export const postVideo = async (props: { id: number; youtubeLink: string }) => {
   const { id, youtubeLink } = props;
-  const { data } = await apiPoster<Team>(`/api/texts/post/${id}/videos`, {
+  const { data } = await apiPoster<Team>(`/api/texts/${id}/videos`, {
     youtubeLink,
   });
   return data;
