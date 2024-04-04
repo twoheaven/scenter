@@ -65,7 +65,10 @@ const FieldSection = () => {
         <Flex
           justifyContent="center"
           width={isMobile ? "100%" : "100%"}
-          style={{ transform: "translatex(0%)" }}
+          style={{
+            transform: "translatex(0%)",
+          }}
+          alignItems="center"
         >
           <Grid
             gridTemplateColumns={isMobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr"}

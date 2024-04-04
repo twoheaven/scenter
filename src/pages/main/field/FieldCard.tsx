@@ -17,13 +17,8 @@ const Distance = () => {
 const FieldCard = ({ field }: FieldCardProps) => {
   const isMobile = useIsMobile();
 
-  const Wrapper = styled.div`
-    white-space: pre-line;
-    word-wrap: break-word;
-  `;
-
   const StyledButton = styled.button`
-    padding: "3px 3px";
+    padding: 3px;
     border: 0.1px solid #999999;
     border-radius: 2px;
     background-color: white;
@@ -51,53 +46,51 @@ const FieldCard = ({ field }: FieldCardProps) => {
 
   return (
     <Flex justifyContent="center">
-      <Flex
-        justifyContent="center"
+      <img
+        width={imageWidth}
+        src={field?.storedFilePath || defaultImage}
+        alt={field?.originalFileName}
+        height={imageWidth}
+      />
+      <StyledButton
         style={{
-          aspectRatio: "1/1",
+          width: `${imageWidth}px`,
+          height: "",
+          minHeight: "180px",
+          alignContent: "flex-start",
         }}
       >
-        <img
-          width={imageWidth}
-          src={field?.storedFilePath || defaultImage}
-          alt={field?.originalFileName}
-        />
-      </Flex>
-      <Spacer height={"1px"} />
-      <StyledButton style={{ width: `${imageWidth}px` }}>
-        <Flex justifyContent="flex-start">
-          <Wrapper>
-            <Spacer height={"5px"} />
-            <Text size="20px" style={{ textAlign: "left" }}>
-              {title}
-              <Distance />
-              <Distance />
-            </Text>
-            <Spacer height={"5px"} />
+        <Flex>
+          <Spacer height={"5px"} />
+          <Text size="20px" style={{ textAlign: "left" }}>
+            {title}
+            <Distance />
+            <Distance />
+          </Text>
+          <Spacer height={"5px"} />
 
-            <Text style={{ textAlign: "left" }}>
-              {date}
-              <Distance />
-              <Distance />
-            </Text>
+          <Text style={{ textAlign: "left" }}>
+            {date}
+            <Distance />
+            <Distance />
+          </Text>
 
-            <Spacer height={"2px"} />
+          <Spacer height={"2px"} />
 
-            <Text style={{ textAlign: "left" }}>
-              출연진 : {casting}
-              <Distance />
-              <Distance />
-            </Text>
+          <Text style={{ textAlign: "left" }}>
+            출연진 : {casting}
+            <Distance />
+            <Distance />
+          </Text>
 
-            <Spacer height={"2px"} />
+          <Spacer height={"2px"} />
 
-            <Text style={{ textAlign: "left" }}>
-              {location}
-              <Distance />
-              <Distance />
-            </Text>
-            <Spacer height={"5px"} />
-          </Wrapper>
+          <Text style={{ textAlign: "left" }}>
+            {location}
+            <Distance />
+            <Distance />
+          </Text>
+          <Spacer height={"5px"} />
         </Flex>
       </StyledButton>
     </Flex>
