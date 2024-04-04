@@ -52,13 +52,20 @@ const FieldCard = ({ field }: FieldCardProps) => {
         alt={field?.originalFileName}
         height={imageWidth}
       />
+      <Spacer height={"3px"} />
       <StyledButton
-        style={{
-          width: `${imageWidth}px`,
-          height: "",
-          minHeight: "180px",
-          alignContent: "flex-start",
-        }}
+        style={
+          isMobile
+            ? {
+                width: `${imageWidth}px`,
+                alignContent: "flex-start",
+                minHeight: "180px",
+              }
+            : {
+                width: `${imageWidth}px`,
+                alignContent: "flex-start",
+              }
+        }
       >
         <Flex>
           <Spacer height={"5px"} />
