@@ -62,10 +62,14 @@ const FieldSection = () => {
           </Text>
         </Flex>
         <Spacer height="20px" />
-        <Flex justifyContent="center" width="100%">
+        <Flex
+          justifyContent="center"
+          width={isMobile ? "100%" : "100%"}
+          style={{ transform: "translatex(0%)" }}
+        >
           <Grid
             gridTemplateColumns={isMobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr"}
-            gap="3px"
+            gap={isMobile ? "3px" : "3px"}
           >
             {fields.map((field) => (
               <React.Fragment key={field.id}>

@@ -30,13 +30,13 @@ const FieldCard = ({ field }: FieldCardProps) => {
   `;
 
   const [imageWidth, setImageWidth] = useState(
-    isMobile ? window.innerWidth / 2.28 : window.innerWidth / 5.5,
+    isMobile ? window.innerWidth / 2.2 : window.innerWidth / 5.5,
   ); // 이미지의 너비를 브라우저 창의 60%로 설정합니다.
 
   useEffect(() => {
     const handleResize = () => {
       setImageWidth(
-        isMobile ? window.innerWidth / 2.28 : window.innerWidth / 5.5,
+        isMobile ? window.innerWidth / 2.2 : window.innerWidth / 5.5,
       ); // 윈도우 크기에 따라 이미지의 너비를 업데이트합니다.
     };
 
