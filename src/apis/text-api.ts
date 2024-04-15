@@ -175,7 +175,7 @@ export const postSubPicture = async (props: { id: number; image: File }) => {
   const formData = new FormData();
   formData.append("imageFile", image);
   const { data } = await apiPoster<Team>(
-    `/api/texts/${id}/sub-pictures`,
+    `/api/texts/post/${id}/sub-pictures`,
     formData,
   );
   return data;
