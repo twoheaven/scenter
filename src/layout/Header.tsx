@@ -66,6 +66,7 @@ const Header = () => {
             justifyContent={"space-between"}
             gap={"15px"}
           >
+
             {/* 문의 전화번호 */}
             <Text color={"black"}>
               <Highlight
