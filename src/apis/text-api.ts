@@ -210,7 +210,7 @@ export const deleteSubPicture = async ({
  */
 export const postVideo = async (props: { id: number; youtubeLink: string }) => {
   const { id, youtubeLink } = props;
-  const { data } = await apiPoster<Team>(`/api/texts/${id}/videos`, {
+  const { data } = await apiPoster<Team>(`/api/texts/post/${id}/videos`, {
     youtubeLink,
   });
   return data;
