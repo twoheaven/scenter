@@ -32,7 +32,7 @@ const Footer = () => {
               color: colorSet.textGray,
             }}
           >
-            <Text size={"14px"}>상호명 : 제이에이치원엔터테인먼트</Text>
+            <Text size={"14px"}>상호명 : SC 엔터테인먼트</Text>
             <Text size={"14px"}>사업자등록번호 : 215-87-82736</Text>
             <Text size={"14px"}>서울특별시 송파구 송이로 20길 4-11</Text>
             <Text size={"14px"}>Tel : 0505-510-0202</Text>
