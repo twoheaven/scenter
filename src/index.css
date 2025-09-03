@@ -48,21 +48,21 @@
 
 .layout {
   /* 드래그를 막는 스타일 */
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  /* -webkit-user-select: none; /* Safari */
+  /* -moz-user-select: none; /*  Firefox */
+  /* -ms-user-select: none; /* IE10+/Edge */
+  /* user-select: none; Standard */
 }
 
 @font-face {
-  font-family: 'G마켓 산스';
-  src: url('경로/고유한-폰트-파일.ttf') format('truetype');
+  font-family: "G마켓 산스";
+  src: url("경로/고유한-폰트-파일.ttf") format("truetype");
   font-weight: bold;
   /* 다른 속성도 추가할 수 있습니다. */
 }
 
 .bold-text {
-  font-family: 'G마켓 산스', sans-serif;
+  font-family: "G마켓 산스", sans-serif;
   /* 기본적으로 sans-serif 폰트를 사용하고, 없으면 'G마켓 산스'를 사용합니다. */
   font-weight: bold;
   /* 필요에 따라 글씨체의 두께를 설정합니다. */
